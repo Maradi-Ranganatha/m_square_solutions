@@ -155,6 +155,9 @@ document.addEventListener('DOMContentLoaded', function() {
             `).join('');
         }
     }
+    function openImage(src) {
+        let popup = window.open(src, "_blank", "width=800,height=600");
+    }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
