@@ -60,26 +60,74 @@ document.addEventListener('DOMContentLoaded', function() {
         // Company data that would normally come from a backend
         const companiesData = [
             {
-                name: 'Luxury Hardwood Supplies',
-                description: 'Premium hardwood flooring materials and accessories supplier.',
-                website: 'luxuryhardwood.com',
-                location: 'New York, USA',
-                image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab'
+                name: 'Ardex Endura',
+                description: 'leading solution providers of high-performance speciality building materials',
+                website: 'www.ardexendura.com',
+                location:'Yeshwanth pur ,HMT complex ,Bengaluru',
+                image: 'https://tse3.mm.bing.net/th?id=OIP.jzOOTr9b-2lBXk-Mus2HRAAAAA&pid=Api&P=0&h=180',
+                
             },
             {
-                name: 'Modern Flooring Solutions',
-                description: 'Innovative flooring technology and installation systems.',
-                website: 'modernflooring.com',
-                location: 'London, UK',
-                image: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a'
+                name: 'Frimsin Chemato India PVT LTD',
+                description: 'leading flooring company specializing in a diverse range of high-quality flooring solutions',
+                website: 'www.frimsinchematoindia.com',
+                location: 'Near BM Valley School Road,Pantharapalya,Mysore Road Bengaluru-560 039',
+                image: 'https://frimsinchematoindia.com/assets/logo-big.png'
             },
             {
-                name: 'Eco Floor Systems',
-                description: 'Sustainable and eco-friendly flooring solutions.',
-                website: 'ecofloorsystems.com',
-                location: 'Sydney, Australia',
-                image: 'https://images.unsplash.com/photo-1497366412874-3415097a27e7'
-            }
+                name: 'MYK ARMET',
+                description: 'Excellent water proofing Solution for wet areas',
+                website: 'www.mykarmet.com',
+                location: 'Hyderabad,India',
+                image: 'https://tse3.mm.bing.net/th?id=OIP._vWVNNavrQFfLidTh8eI8wAAAA&pid=Api&P=0&h=180'
+            },
+            {
+                name: 'Dr Fixit',
+                description: 'Water proofing solutions',
+                website: 'www.drfixit.co.in',
+                location: 'Mumbai,India',
+                image: 'https://tse4.mm.bing.net/th?id=OIP.KZr-Fu215n7iFKwKrcVmeQHaEA&pid=Api&P=0&h=180'
+            },
+
+           { name: 'Fosroc',
+            description: 'Concrete mix and design support',
+            website: 'www.fosroc.com',
+            location: 'All over India',
+            image: 'https://s.yimg.com/fz/api/res/1.2/_Qx.1XKWqcvzX4Ypnl_l_Q--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjIw/https://s.yimg.com/zb/imgv1/23bd0f1a-7059-39e6-ae86-e32b1002da62/t_500x300'
+            },
+
+            {
+                name: 'Asian Paints',
+                description: 'Expert painting with on-time site completion guaranteed',
+                website: 'www.asianpaints.com',
+                location: 'India',
+                image: 'https://tse4.mm.bing.net/th?id=OIP.0ExAWLML-qu7Sh959Gm3dgHaEK&pid=Api&P=0&h=180'
+                
+            },
+
+            {
+                name: 'Floor Care Technologies PVT LTD',
+                description: 'Leading manufacturers and exporters',
+                website: 'www.floorcareindia.com',
+                location: 'Floor Care technologies Pvt Ltd,Survey no 50/2, Ganakallu Village,Tavarekere hobli, Magadi Road,Bangalore south Taluk - 562130',
+                image: 'https://www.floorcareindia.com/pics/logo.png'
+            },
+
+            {
+                name: 'ACE BOND',
+                description: 'To Innovate continuously and provide unique solutions in Construction Technology',
+                website: 'www.acebond.in',
+                location: 'D.No.1-27/B, ACEBOND Road,Vakwadi Village and Post,Kundapura Taluk, Udupi District,Karnataka - 576 257',
+                image: 'http://acebond.in/wp-content/themes/acepro/images/ACEBOND%20LOGO.jpg'
+            },
+            {
+                name: 'SIKA',
+                description: 'Global leader in specialty chemicals for construction and industry sectors',
+                website: 'www.sika.com',
+                location: 'Zugerstrasse 50CH-6340 Baar (ZG)Switzerland',
+                image: 'https://sika.scene7.com/is/content/sika/Sika_ClaimU_pos_rgb'
+            },
+            
         ];
 
         // Render companies
