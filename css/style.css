@@ -284,16 +284,17 @@ footer {
 /* Marquee container - hides overflow */
 .marquee-container {
     width: 100vw;  /* Full width */
-    overflow: hidden; /* Hides the scrollbar */
+   
     white-space: nowrap;
     position: relative;
+    overflow: hidden;
 }
 
 /* Marquee content - flex for scrolling effect */
 .marquee-content {
-    display: flex;
-    animation: scrolling 40s linear infinite;
-    min-width: 1275%; /* Ensures smooth scrolling */
+    display: inline-flex;
+    animation: scrolling 30s linear infinite;
+    min-width: 200%; /* Ensures smooth scrolling */
   
 
 }
@@ -337,4 +338,14 @@ footer {
 .marquee-item img:hover {
     transform: scale(1.1); /* Slight zoom */
 }
-
+@media screen and (max-width: 768px) {
+    .marquee-item img {
+        height: 60px; /* Reduce size for small screens */
+    }
+}
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 1000px) {
+    .marquee-item img {
+        height: 80px;
+    }
+}
