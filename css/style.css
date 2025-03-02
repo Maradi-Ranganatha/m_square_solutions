@@ -8,6 +8,7 @@
 }
 nav{
     background-color: black;
+    
 }
 body {
     font-family: 'Inter', sans-serif;
@@ -211,6 +212,13 @@ footer {
                 url('https://images.unsplash.com/photo-1497366858526-0766cadbe8fa') center/cover;
     color: white;
     padding: 150px 0 100px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px;
+    width: 100%;
 }
 
 .company-card {
@@ -292,9 +300,9 @@ footer {
 
 /* Marquee content - flex for scrolling effect */
 .marquee-content {
-    display: inline-flex;
+    display: flex;
     animation: scrolling 30s linear infinite;
-    min-width: 200%; /* Ensures smooth scrolling */
+    min-width: 1275%; /* Ensures smooth scrolling */
   
 
 }
@@ -347,5 +355,84 @@ footer {
 @media screen and (max-width: 1000px) {
     .marquee-item img {
         height: 80px;
+       
     }
+}
+
+/* Styles specific to the maradi section */
+.maradi {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 30px 15px; /* Adjusted padding for mobile */
+}
+
+.maradi .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px; /* Ensuring proper spacing */
+    display: flex;
+}
+
+
+
+.homesolutionimginfo {
+    width: 300px; /* Adjust width as needed */
+    max-width: 100%; /* Ensures responsiveness */
+    padding: 20px;
+    background: rgba(117, 143, 201, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin: 20px;
+}
+
+.homesolutionimginfo:hover {
+    transform: translateY(-5px);
+}
+
+.soluimg img {
+    width: auto; /* Smaller size for mobile */
+    height: auto;
+    
+}
+
+.soluinfo h3 {
+    font-size: 16px; /* Slightly smaller font for mobile */
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .homesolutionimginfo {
+        width: 250px; /* Restore width for tablets and larger screens */
+    }
+
+    .soluimg img {
+        width: 100px; /* Larger images on bigger screens */
+    }
+
+    .soluinfo h3 {
+        font-size: 18px; /* Restore font size */
+    }
+}
+/* For larger screens, increase the width */
+@media (min-width: 768px) {
+    .homesolutionimginfo {
+        width: 350px; /* Wider on tablets/desktops */
+    }
+}
+
+@media (min-width: 1024px) {
+    .homesolutionimginfo {
+        width: 400px; /* Even wider on large screens */
+    }
+}
+.chandru{
+    display: inline-block;
+    margin: 20px;
+    border-radius: 10px solid black;
+}
+.chicago{
+    margin-top: 100px;
 }
