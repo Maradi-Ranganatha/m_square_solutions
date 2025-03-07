@@ -67,61 +67,72 @@
                             <i class="fas fa-map-marker-alt fa-2x me-3 text-primary"></i>
                             <div>
                                 <h5>Address</h5>
-                                <p>123 Floor Street, City<br>State, Country - ZIP</p>
+                                <p>#51,1ST Main, 4th Cross, Lakshmana Nagar, Hegganahalli Cross, Banglore-560091</p>
                             </div>
                         </div>
                         <div class="d-flex mb-3">
                             <i class="fas fa-phone fa-2x me-3 text-primary"></i>
                             <div>
                                 <h5>Phone</h5>
-                                <p>+1 234 567 890</p>
+                                <p>+91 9945169592 <br> +91 6361048781</p>
                             </div>
                         </div>
                         <div class="d-flex mb-3">
                             <i class="fas fa-envelope fa-2x me-3 text-primary"></i>
                             <div>
                                 <h5>Email</h5>
-                                <p>info@anjanadrifloor.tech</p>
+                                <p>anjanadrifloortechsolutions@gmail.com</p>
                             </div>
                         </div>
                         <div class="d-flex mb-3">
                             <i class="fas fa-clock fa-2x me-3 text-primary"></i>
                             <div>
                                 <h5>Business Hours</h5>
-                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
-                                Saturday: 10:00 AM - 4:00 PM<br>
+                                <p>Monday - Satuarday: 9:00 AM - 6:00 PM<br>
+                                <br>
                                 Sunday: Closed</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
-                    <form id="contact-form" class="contact-form bg-white p-4 rounded shadow">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="591c353f-455f-4899-ba0a-cafb5bf49407">
                         <h3 class="mb-4">Send us a Message</h3>
+                    
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                         </div>
+                        
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                         </div>
+                        
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Contact Number" pattern="[0-9]{10}" required>
                         </div>
+                    
                         <div class="mb-3">
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                         </div>
+                    
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                    
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
-                </div>
+                    
+                
             </div>
         </div>
     </section>
     <!-- Map Section -->
     <section class="map-section py-5 bg-light">
         <div class="container">
+            
             <div class="ratio ratio-16x9" data-aos="zoom-in">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007!5e0!3m2!1sen!2sus!4v1644262070010!5m2!1sen!2sus" 
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5643131127927!2d77.50144371039566!3d12.999694987265372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3c5a7cfed1b7%3A0x8d4bac7464f4b0d5!2sHegganahalli%20Cross!5e0!3m2!1sen!2sin!4v1740934837153!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>

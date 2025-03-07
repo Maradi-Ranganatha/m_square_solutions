@@ -19,38 +19,48 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+        background: linear-gradient(to bottom, skyblue, lightgreen);
+        margin-top: 266px;
+        }
+    </style>
+
+    
 </head>
-<body>
+<body >
     <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-blak">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <span class="fw-bold anjanadri">ANJANADRI FLOOR TECH SOLUTIONS </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="services.html">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="companies.html">Associated Companies</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="fw-bold anjanadri">ANJANADRI FLOORTECH SOLUTIONS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="companies.html">Associated Companies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+    
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -304,18 +314,33 @@
             <h2 class="text-center mb-5" data-aos="fade-up">Contact Us</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <form class="contact-form" data-aos="fade-up">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="591c353f-455f-4899-ba0a-cafb5bf49407">
+                        <h3 class="mb-4">Send us a Message</h3>
+                    
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                         </div>
+                        
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                         </div>
+                        
                         <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Contact Number" pattern="[0-9]{10}" required>
                         </div>
+                    
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                    
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
+                    
                 </div>
             </div>
         </div>

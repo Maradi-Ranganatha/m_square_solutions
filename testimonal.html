@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web3Forms Test</title>
 </head>
 <body>
-    
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="d5c19c1c-5c97-49e0-a3b8-7bec130908b0">
+
+        <label>Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label>Message:</label>
+        <textarea name="message" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
 </body>
 </html>
