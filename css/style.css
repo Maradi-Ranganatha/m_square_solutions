@@ -15,7 +15,7 @@ body {
     line-height: 1.6;
     color: var(--dark-gray);
     overflow-x: hidden;
-    
+    align-items: center;
 }
 
 /* Navigation */
@@ -405,31 +405,9 @@ footer {
 }
 
 /* Responsive adjustments */
-@media (min-width: 768px) {
-    .homesolutionimginfo {
-        width: 250px; /* Restore width for tablets and larger screens */
-    }
 
-    .soluimg img {
-        width: 100px; /* Larger images on bigger screens */
-    }
-
-    .soluinfo h3 {
-        font-size: 18px; /* Restore font size */
-    }
-}
 /* For larger screens, increase the width */
-@media (min-width: 768px) {
-    .homesolutionimginfo {
-        width: 350px; /* Wider on tablets/desktops */
-    }
-}
 
-@media (min-width: 1024px) {
-    .homesolutionimginfo {
-        width: 400px; /* Even wider on large screens */
-    }
-}
 .chandru{
     display: inline-block;
     margin: 20px;
@@ -453,78 +431,45 @@ footer {
 }
 
 /* Ensure each row stacks properly on mobile */
-/* Base styles for all screen sizes */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 10px;
-    margin: 0 auto;
-}
-
-/* Flexbox layout for larger screens (desktop & landscape mode) */
-.contaent-h-solution {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.homesolutionimginfo {
-    flex: 1 1 30%; /* Adjust width dynamically */
-    max-width: 300px;
-    text-align: center;
-}
-
-.soluimg img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-}
-
-.soluinfo h3 {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-/* ✅ Mobile: Vertical (Portrait Mode) */
-@media (max-width: 768px) {  /* Applies to screens smaller than 768px (like mobile in portrait mode) */
+@media (max-width: 1024px) {
     .contaent-h-solution {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center;
-        gap: 10px; /* Reduce space */
-    }
-
-    .homesolutionimginfo {
-        width: 90%; /* Make items fit better */
-    }
-
-    .soluimg img {
-        max-width: 200px; /* Reduce image size */
-    }
-
-    .soluinfo h3 {
-        font-size: 16px; /* Adjust text size */
-    }
-}
-
-/* ✅ Mobile: Horizontal (Landscape Mode) */
-@media (max-width: 1024px) and (orientation: landscape) {
-    .contaent-h-solution {
-        flex-wrap: wrap; /* Allow wrapping */
+        flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
     .homesolutionimginfo {
-        flex: 1 1 45%; /* Allow 2 items per row */
+        width: 90%;
         max-width: 250px;
+        text-align: center;
     }
 
     .soluimg img {
-        max-width: 220px;
+        max-width: 80%;
     }
 
     .soluinfo h3 {
-        font-size: 17px;
+        font-size: 16px;
+    }
+
+    /* Adjustments for landscape mode (wider screens) */
+    @media (orientation: landscape) {
+        .contaent-h-solution {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .homesolutionimginfo {
+            flex: 1 1 45%;
+            max-width: 300px;
+        }
+
+        .soluimg img {
+            max-width: 220px;
+        }
+
+        .soluinfo h3 {
+            font-size: 17px;
+        }
     }
 }
