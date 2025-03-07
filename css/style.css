@@ -363,14 +363,14 @@ footer {
 
 /* Styles specific to the maradi section */
 .maradi {
-    background-color: #f8f9fa; /* Light grey background */
+     /* Light grey background */
     padding: 30px 15px; /* Adjusted padding for mobile */
 }
 
 .maradi .container {
     max-width: 1200px;
     margin: auto;
-    padding: 0 15px; /* Ensuring proper spacing */
+     /* Ensuring proper spacing */
     display: flex;
 }
 
