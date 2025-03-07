@@ -432,6 +432,9 @@ footer {
 
 /* Ensure each row stacks properly on mobile */
 @media (max-width: 1024px) {
+    body{
+        overflow-x:hidden ;
+    }
     .contaent-h-solution {
         flex-wrap: wrap;
         justify-content: center;
