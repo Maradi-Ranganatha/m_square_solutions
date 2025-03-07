@@ -15,7 +15,7 @@ body {
     line-height: 1.6;
     color: var(--dark-gray);
     overflow-x: hidden;
-    align-items: center;
+    
 }
 
 /* Navigation */
@@ -453,25 +453,78 @@ footer {
 }
 
 /* Ensure each row stacks properly on mobile */
-@media (max-width: 768px) {
+/* Base styles for all screen sizes */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/* Flexbox layout for larger screens (desktop & landscape mode) */
+.contaent-h-solution {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.homesolutionimginfo {
+    flex: 1 1 30%; /* Adjust width dynamically */
+    max-width: 300px;
+    text-align: center;
+}
+
+.soluimg img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.soluinfo h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* ✅ Mobile: Vertical (Portrait Mode) */
+@media (max-width: 768px) {  /* Applies to screens smaller than 768px (like mobile in portrait mode) */
     .contaent-h-solution {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center content */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        gap: 10px; /* Reduce space */
     }
-    
+
     .homesolutionimginfo {
-        width: 100%;  /* Full width */
-        text-align: center;
-        margin-bottom: 20px; /* Spacing */
+        width: 90%; /* Make items fit better */
     }
 
     .soluimg img {
-        max-width: 80%; /* Adjust image size */
-        height: auto;
+        max-width: 200px; /* Reduce image size */
     }
 
     .soluinfo h3 {
-        font-size: 16px; /* Reduce text size for better fit */
+        font-size: 16px; /* Adjust text size */
+    }
+}
+
+/* ✅ Mobile: Horizontal (Landscape Mode) */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .contaent-h-solution {
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .homesolutionimginfo {
+        flex: 1 1 45%; /* Allow 2 items per row */
+        max-width: 250px;
+    }
+
+    .soluimg img {
+        max-width: 220px;
+    }
+
+    .soluinfo h3 {
+        font-size: 17px;
     }
 }
