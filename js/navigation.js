@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sessionStorage.setItem('redirectUrl', targetUrl);
         
         // Navigate to loading page
-        window.location.href = '/loading/loading.html';
+        window.location.href = '/loading.html';
       });
     });
   });

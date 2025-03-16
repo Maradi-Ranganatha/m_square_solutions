@@ -193,8 +193,8 @@
         }
     </style>
 </head>
-<body>
-    <base href="/loading/">
+
+    
     <div class="background-particles" id="particles"></div>
     
     <div class="loading-container" id="loadingContainer">
@@ -209,7 +209,7 @@
         </div>
         <div class="percentage" id="percentage">0%</div>
     </div>
-    <a href="../index.html">
+    <a href="/index.html">
     <h1 class="appear-text" id="welcomeText">WELCOME TO ANJANADRI FLOORTECH SOLUTIONS</h1>
 </a>
     <script>
@@ -258,7 +258,7 @@
             
             // Redirect to index.html after loading
             setTimeout(() => {
-                window.location.href = "../index.html";
+                window.location.href = "/index.html";
             }, 500);
         } else {
             width += increment;
@@ -274,11 +274,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // If no target URL is stored, redirect to homepage
   if (!targetUrl) {
-    setTimeout(function() {
-      window.location.href = 'index.html';
-    }, 2000); // Adjust loading time as needed
-    return;
-  }
+  setTimeout(function() {
+    window.location.href = '/index.html';  // Use absolute path
+  }, 2000);
+  return;
+}
   
   // Otherwise, redirect to the target URL after showing loading animation
   setTimeout(function() {
