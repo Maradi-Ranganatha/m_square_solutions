@@ -1,0 +1,546 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-gray: #ced2d7;
+    --dark-gray: #343a40;
+}
+
+nav {
+    background-color: black;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    overflow-x: hidden;
+    align-items: center;
+    background: linear-gradient(to right, #b6bbc0, #e9ecef);
+    padding-top: 190px; /* Added to account for fixed navbar height */
+}
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 190px;
+    background-color: black;
+    
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.25rem;
+    position: relative;
+    background-color: #269236;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+/* Anjanadri animation */
+.anjanadri {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 50px;
+    font-weight: bolder;
+    color: aqua;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: absolute;
+    width: 400px;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -200px;
+    }
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 60px 0 40px;
+    margin-top: 0; /* Removed conflicting margin */
+}
+
+.about-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.left-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.right-column {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.description-text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-weight: bolder;
+}
+
+.featured-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background: var(--dark-gray);
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos=fade-up] {
+    transform: translateY(50px);
+}
+
+[data-aos=fade-right] {
+    transform: translateX(-50px);
+}
+
+[data-aos=fade-left] {
+    transform: translateX(50px);
+}
+
+.aos-animate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transform: translateX(0) !important;
+}
+
+/* Styles specific to the Equipment section */
+.chandru {
+    width: 300px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.chandru:hover {
+    transform: translateY(-5px);
+}
+
+.img-fluid {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Styles specific to the maradi section */
+.maradi {
+    padding: 30px 15px;
+}
+
+.maradi .Container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.contaent-h-solution {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+.homesolutionimginfo {
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.homesolutionimginfo:hover {
+    transform: translateY(-5px);
+}
+
+.soluimg img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.soluinfo h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.our-story {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 40px 0;
+}
+
+.Cont {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    border: 5px solid black;
+    border-radius: 10px; /* Added rounded corners */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.chandru img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.chandru-title {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.chandru-title h2 {
+    font-size: 1.2rem;
+    color: #2b5876;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Value cards styling */
+.value-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card i {
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .navbar {
+        height: auto;
+    }
+    
+    .anjanadri {
+        font-size: 40px;
+        width: 320px;
+    }
+    
+    body {
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        padding-top: 120px; /* Adjusted for mobile */
+    }
+    
+    .anjanadri {
+        font-size: 30px;
+        width: 250px;
+        margin: 10px;
+    }
+    
+    .navbar {
+        height: auto;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .section-heading {
+        font-size: 2rem;
+    }
+    
+    .content-row {
+        flex-direction: column;
+    }
+    
+    .left-column, .right-column {
+        width: 100%;
+    }
+    
+    .description-text {
+        font-size: 1.2rem;
+    }
+    
+    .featured-image {
+        margin-top: 20px;
+    }
+    
+    .contaent-h-solution {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .homesolutionimginfo {
+        width: 90%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    .soluimg img {
+        max-width: 80%;
+    }
+
+    .soluinfo h3 {
+        font-size: 16px;
+    }
+    
+    .maradi .Container {
+        display: block;
+    }
+    
+    .chandru {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+    
+    .Cont {
+        padding: 30px 15px;
+    }
+}
+
+/* Adjustments for landscape mode */
+@media (orientation: landscape) and (max-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
+    
+    .contaent-h-solution {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .homesolutionimginfo {
+        flex: 1 1 45%;
+        max-width: 300px;
+    }
+
+    .soluimg img {
+        max-width: 220px;
+    }
+
+    .soluinfo h3 {
+        font-size: 17px;
+    }
+    
+    .row {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .anjanadri {
+        font-size: 24px;
+        width: 200px;
+    }
+    
+    body {
+        padding-top: 100px;
+    }
+    
+    .section-heading {
+        font-size: 1.8rem;
+    }
+    
+    .description-text {
+        font-size: 1rem;
+    }
+    
+    .chandru {
+        max-width: 250px;
+    }
+    
+    .img-fluid {
+        height: 200px;
+    }
+}
+@media (max-width: 767px) {
+    /* Navbar sizing */
+    .navbar {
+        height: auto !important;
+        min-height: 60px;
+        padding: 0.3rem 0;
+    }
+    
+    /* Reduce body padding */
+    body {
+        padding-top: 90px !important; /* Adjusted for smaller navbar */
+    }
+    
+    /* Company name styling */
+    .anjanadri {
+        font-size: 22px;
+        margin: 5px;
+        padding: 3px 6px;
+        width: 220px;
+        animation: marquee 15s linear infinite; /* Slowed down animation */
+    }
+    
+    /* Navigation links */
+    .nav-link {
+        padding: 0.3rem 0.6rem !important;
+        margin: 0.1rem 0;
+        font-size: 0.9rem;
+        display: block;
+        text-align: center;
+    }
+    
+    /* Navbar toggler (hamburger menu) */
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+        margin-right: 10px;
+    }
+    
+    /* When menu is expanded */
+    .navbar-collapse {
+        margin-top: 10px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    /* Extra small devices */
+    @media (max-width: 480px) {
+        .anjanadri {
+            font-size: 18px;
+            width: 180px;
+        }
+        
+        body {
+            padding-top: 80px !important;
+        }
+        
+        .navbar-brand {
+            margin-right: 0;
+        }
+    }
+}
+/* Update these specific rules in your about.css file */
+
+
+
+/* Ensure the media queries have higher specificity */
+@media (max-width: 991px) {
+    body {
+        padding-top: 150px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 120px !important; /* Increase this value */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 110px !important;
+    }
+}

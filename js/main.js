@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 description: 'To Innovate continuously and provide unique solutions in Construction Technology',
                 website: 'www.acebond.in',
                 location: 'D.No.1-27/B, ACEBOND Road,Vakwadi Village and Post,Kundapura Taluk, Udupi District,Karnataka - 576 257',
-                image: 'http://acebond.in/wp-content/themes/acepro/images/ACEBOND%20LOGO.jpg'
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSHlFLSkbZF2Zwzxq6NiSrryALLNY5jJZYsQ&s'
             },
             {
                 name: 'SIKA',

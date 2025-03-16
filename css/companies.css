@@ -1,0 +1,171 @@
+/* Global Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-gray: #ced2d7;
+    --dark-gray: #343a40;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    overflow-x: hidden;
+    align-items: center;
+}
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 190px;
+    background-color: black;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.25rem;
+    position: relative;
+    background-color: #269236;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Companies Hero Section */
+.companies-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1497366858526-0766cadbe8fa') center/cover;
+    color: white;
+    padding: 150px 0 100px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px;
+    width: 100%;
+}
+
+/* Companies Grid Section */
+.company-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-10px);
+}
+
+.company-logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    padding: 10px;
+}
+
+.company-details {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+/* Partnership Benefits */
+.benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    color: var(--secondary-color);
+}
+
+/* Footer Styles */
+footer {
+    background: var(--dark-gray);
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* AOS Animation Styles */
+[data-aos^=fade][data-aos^=fade] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos=fade-up] {
+    transform: translateY(50px);
+}
+
+.aos-animate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .companies-hero {
+        padding: 100px 0 50px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    
+    .chicago {
+        margin-top: 100px;
+    }
+}
