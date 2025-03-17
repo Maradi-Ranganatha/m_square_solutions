@@ -53,6 +53,7 @@ body {
     transition: width 0.3s ease;
 }
 
+
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
@@ -62,7 +63,7 @@ body {
 .hero-section {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                 url('../photos/opening_photo.jpg') center/cover;
-    color: white;
+    color: rgb(246, 243, 247);
     padding: 200px 0 100px;
     margin-top: -76px;
     
