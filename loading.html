@@ -10,23 +10,31 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            color: #fff;
-            background-image: url("https://wallpaperaccess.com/full/15739125.jpg");
-             background-size: cover;  
-            background-position: center;
-            background-attachment: fixed; /* Makes it stay fixed while scrolling */
-            background-repeat: no-repeat;
-            height: 100vh;
-            width: 100vw;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        html, body {
+         height: 100%;
+         width: 100%;
+         margin: 0;
+         padding: 0;
+        overflow: hidden; 
+       }
+       body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #fff;
+    background-image: url("./photos/he1.jpg");
+    background-size: cover;  
+    background-size: contain; 
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+}
         
         /* Overlay to ensure text readability over any background */
         body::before {
@@ -193,7 +201,7 @@
         }
     </style>
 </head>
-
+    <div>
     
     <div class="background-particles" id="particles"></div>
     
@@ -212,6 +220,7 @@
     <a href="/index.html">
     <h1 class="appear-text" id="welcomeText">WELCOME TO ANJANADRI FLOORTECH SOLUTIONS</h1>
 </a>
+
     <script>
         // Create background particles
         function createParticles() {

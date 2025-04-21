@@ -24,13 +24,13 @@ body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     height: 190px;
     background-color: black;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
 }
 
 .navbar-brand {
     font-size: 1.5rem;
+    color: #00BFFF !important;
 }
 
 .nav-link {
@@ -39,6 +39,7 @@ body {
     margin: 0 0.25rem;
     position: relative;
     background-color: #269236;
+    white-space: nowrap;
 }
 
 .nav-link::after {
@@ -53,7 +54,6 @@ body {
     transition: width 0.3s ease;
 }
 
-
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
@@ -65,8 +65,6 @@ body {
                 url('../photos/opening_photo.jpg') center/cover;
     color: rgb(246, 243, 247);
     padding: 200px 0 100px;
-    margin-top: -76px;
-    
 }
 
 /* Portfolio Section */
@@ -122,23 +120,6 @@ footer {
     transform: translateY(0) !important;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-section {
-        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-        url('../photos/opening_photo.jpg') center/contain no-repeat;
-        background-size: cover;
-    }
-    
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-    
-    body {
-        overflow-x: hidden;
-    }
-}
-
 /* Anjanadri Title Animation */
 .anjanadri {
     display: inline-block;
@@ -175,7 +156,6 @@ footer {
     display: flex;
     animation: scrolling 30s linear infinite;
     min-width: 1275%;
-    
 }
 
 .marquee-item {
@@ -224,92 +204,263 @@ footer {
     margin: 0 auto;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 1000px) {
+.FLOORTECH {
+    height: 80px;
+    width: 100%;
+    background-color: #269236;
+}
+
+h2.text-center {
+    font-size: 5rem;
+    font-weight: bolder;
+    color: black;
+}
+
+/* Animated Text Between Navbar and Hero Section */
+.animated-title {
+    position: fixed;
+    top: 190px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    overflow: hidden;
+}
+  
+.animated-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00f2fe;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slide-in-out 15s linear infinite;
+}
+  
+@keyframes slide-in-out {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-brand-container {
+    display: flex;
+    align-items: center;
+    max-width: 60%;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-logo {
+    position: relative;
+    z-index: 1000;
+    margin-right: 20px;
+    height: 160px;
+    width: 160px;
+    margin-top: 0px;
+    flex-shrink: 0;
+}
+/* Navbar toggler custom styling */
+.navbar-toggler {
+    background-color: white;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+@media (max-width: 768px) {
+    /* Other existing rules... */
+    
+    /* Navbar toggler additional styling for mobile */
+    .navbar-toggler {
+        margin-right: 10px;
+        padding: 4px 8px;
+    }
+    
+    .navbar-toggler-icon {
+        width: 1.2em;
+        height: 1.2em;
+    }
+}
+/* Load custom Boldonse font */
+@font-face {
+    font-family: "Boldonse";
+    src: url("fonts/Boldonse.woff2") format("woff2"),
+         url("fonts/Boldonse.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* CONSOLIDATED MEDIA QUERIES */
+@media (max-width: 1000px) {
     .marquee-item img {
         height: 80px;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .marquee-item img {
-        height: 60px;
+@media (max-width: 992px) {
+    .logo-brand-container {
+        max-width: 75%;
     }
-}
-.FLOORTECH{
-    height: 80px;
-    width: 100%;
-    background-color: #269236;
-}
-h2.text-center {
-    font-size: 5rem; /* Large size for desktops */
-    font-weight: bolder;
-    color: black;
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 768px) {
-    h2.text-center {
-        font-size: 2rem; /* Adjust for mobile screens */
-    }
-}
-
-/* Update in index.css */
-@media (max-width: 768px) {
-    .navbar {
-        height: auto;
-        padding: 0.5rem 0;
-    }
-    
-    .anjanadri {
-        font-size: 24px;
-        width: 100%;
-        animation: none;
-        position: relative;
-        left: 0;
-        text-align: center;
-        margin: 10px 0;
-    }
-}
-/* Update in index.css */
-@media (max-width: 768px) {
-    .navbar {
-        height: auto;
-        padding: 0.5rem 0;
-    }
-    
-    .anjanadri {
-        font-size: 24px;
-        width: 100%;
-        animation: none;
-        position: relative;
-        left: 0;
-        text-align: center;
-        margin: 10px 0;
-    }
-}
-/* Update in index.css */
-@media (max-width: 768px) {
+    /* Body adjustments */
     body {
         margin-top: 150px;
+        overflow-x: hidden;
     }
-}
-/* Update in index.css */
-@media (max-width: 768px) {
+    
+    /* Hero section adjustments */
     .hero-section {
         padding: 100px 0 50px;
         margin-top: -50px;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                    url('../photos/opening_photo.jpg') center/cover;
     }
-}
-/* Update in index.css */
-
-/* Update in index.css */
-@media (max-width: 768px) {
+    
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    /* Navbar adjustments */
+    .navbar {
+        height: auto;
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+        white-space: normal;
+        margin-left: 10px;
+        margin-right: 0;
+        overflow: hidden;
+        max-width: 70%;
+    }
+    
+    .navbar-logo {
+        height: 60px !important;
+        width: auto;
+        margin-right: 0;
+        margin-left: 10px;
+        max-height: 60px;
+    }
+    
+    .navbar > .container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar-toggler {
+        margin-left: auto;
+        background-color: #fff;
+    }
+    
+    .navbar-collapse {
+        background-color: black;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .nav-link {
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    /* Anjanadri title adjustments */
+    .anjanadri {
+        font-size: 24px;
+        width: max-content;
+        animation: marquee 12s linear infinite;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 10px 0;
+        position: relative;
+        text-align: center;
+        padding: 5px;
+    }
+    
+    @keyframes marquee {
+        from {
+            left: 100%;
+        }
+        to {
+            left: -150%;
+        }
+    }
+    
+    /* Marquee adjustments */
+    .marquee-item img {
+        height: 60px;
+    }
+    
+    /* Animated title adjustments */
+    .animated-title {
+        top: 150px;
+    }
+    
+    .animated-text {
+        font-size: 18px;
+    }
+    
+    /* Portfolio adjustments */
     .img-fluid {
         max-width: 100%;
         height: auto;
     }
+    
+    /* Text adjustments */
+    h2.text-center {
+        font-size: 2rem;
+    }
+    
+    /* Logo and branding adjustments */
+    .logo-brand-container {
+        max-width: 80%;
+    }
 }
-/* Add to index.css */
+
 @media (max-width: 576px) {
     .hero-section h1 {
         font-size: 1.8rem;
@@ -320,67 +471,87 @@ h2.text-center {
     }
     
     .navbar-brand {
-        font-size: 1rem;
-    }
-}
-/* Update the mobile media query for the anjanadri class */
-@media (max-width: 768px) {
-    .navbar {
-        height: auto;
-        padding: 0.5rem 0;
+        font-size: 0.9rem;
     }
     
-    .anjanadri {
-        font-size: 24px;
-        width: max-content;
-        animation: marquee 12s linear infinite; /* Keep animation, but adjust timing */
+    .logo-brand-container {
+        max-width: 75%;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-brand {
         white-space: nowrap;
-        overflow: hidden;
-        margin: 10px 0;
+        font-size: 0.65rem; /* Smaller font size to fit the full text */
+        overflow: visible;
+        text-overflow: clip;
+        margin-left: 5px;
+        padding: 0;
     }
     
-    @keyframes marquee {
-        from {
-            left: 100%;
-        }
-        to {
-            left: -150%;  /* Adjust this value for mobile */
-        }
-    }
-}
-.navbar-logo {
-    position: relative;
-    z-index: 1000;
-    margin-right: 200px;
-    height: 100px;
-    width: 125px;
-    margin-top: 0px;
-}
-@media (max-width: 768px) {
-    .navbar-logo {
-        height: 60px !important; /* Smaller logo on mobile */
-        margin-left: 10px;
-    }
-    .navbar > .container {
-        flex-wrap: nowrap;
+    .logo-brand-container {
+        width: 85%;
         justify-content: flex-start;
     }
-}
-.navbar-logo {
-    position: relative;
-    z-index: 1000;
-    margin-right: 200px;
-    height: 100px;
-    width: 125px;
-    margin-top: 0px;
-}
-@media (max-width: 768px) {
+    
     .navbar-logo {
-        height: 60px !important; /* Smaller logo on mobile */
-        margin-left: 10px;
+        height: 50px !important;
+        width: auto;
+        margin-right: 5px;
     }
-    .navbar > .container {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 0.55rem; /* Even smaller for very small screens */
+    }
+    
+    .navbar-logo {
+        height: 45px !important;
+    }
+}
+/* Fix mobile navigation display */
+@media (max-width: 768px) {
+    /* Ensure the collapsed menu is visible when expanded */
+    .navbar-collapse.show, 
+    .navbar-collapse.collapsing {
+        display: block !important;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        padding: 10px 15px;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    
+    /* Ensure nav links are properly styled and visible */
+    .navbar-collapse .nav-item {
+        margin: 8px 0;
+        width: 100%;
+    }
+    
+    .navbar-collapse .nav-link {
+        display: block;
+        text-align: center;
+        padding: 8px 15px !important;
+        margin: 0;
+        width: 100%;
+        color: white !important;
+    }
+    
+    /* Fix toggler position and visibility */
+    .navbar-toggler {
+        display: block;
+        margin-left: auto;
+        position: relative;
+        z-index: 1100;
+    }
+    
+    /* Ensure proper spacing in container */
+    .nav-container {
+        padding: 10px;
+        position: relative;
     }
 }

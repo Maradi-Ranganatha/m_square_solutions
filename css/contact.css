@@ -1,14 +1,12 @@
+@import url("navbar.css");
 /* Global Styles */
+
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
     --light-gray: #ced2d7;
     --dark-gray: #343a40;
-}
-
-nav {
-    background-color: black;
 }
 
 body {
@@ -19,44 +17,6 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
-    width: 100%;
-}
-
-/* Navigation */
-.navbar {
-    padding: 1rem 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    height: 190px;
-    background-color: black;
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-}
-
-.nav-link {
-    font-weight: 500;
-    padding: 0.5rem 1rem !important;
-    margin: 0 0.25rem;
-    position: relative;
-    background-color: #269236;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: var(--secondary-color);
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
     width: 100%;
 }
 
@@ -160,97 +120,185 @@ footer {
     color: var(--secondary-color) !important;
 }
 
+/* Contact Details Improvements */
+.contact-details .d-flex .fas.fa-envelope + div p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    max-width: 100%;
+}
+
+/* Improved Footer Email Display */
+footer p {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Basic mobile adjustments */
     body {
         overflow-x: hidden;
     }
     
-    .navbar {
-        height: auto;
-        padding: 10px;
-    }
-
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-
-    .nav-link {
-        display: block;
-        
-        padding: 10px;
-        background-color: transparent;
-    }
-
+    /* Contact hero section adjustment */
     .contact-hero {
-        padding: 100px 20px;
+        padding: 100px 15px 60px;
     }
-
-    .contact-details,
-    .contact-form {
-        margin-bottom: 2rem;
-        width: 90%;
+    
+    .contact-hero h1 {
+        font-size: 2rem !important;
+        margin: 40px 0 !important;
     }
-
-    .anjanadri {
-        font-size: 30px;
-        width: 100%;
-        text-align: center;
-        position: relative;
-        animation: mobile-scroll 8s linear infinite;
+    
+    .contact-hero p.lead {
+        font-size: 1rem;
+        padding: 0 10px;
     }
-
-    @keyframes mobile-scroll {
-        from {
-            transform: translateX(100%);
-        }
-        to {
-            transform: translateX(-100%);
-        }
+    
+    /* Contact info section adjustments */
+    .contact-info .container {
+        padding: 0 15px;
     }
-
-   
-
-    footer {
+    
+    .contact-info .row {
+        margin: 0;
+    }
+    
+    .contact-info .col-md-6 {
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+    
+    /* Form adjustments */
+    form {
         padding: 15px;
-        font-size: 14px;
     }
-
+    
+    /* Contact details improvements */
+    .contact-details {
+        margin-bottom: 30px;
+        padding: 15px;
+        height: auto;
+    }
+    
+    .contact-details h3,
+    form h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-details .d-flex {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+    
+    .contact-details .d-flex i {
+        margin-right: 15px;
+        font-size: 1.5rem !important;
+        margin-top: 5px;
+    }
+    
+    .contact-details .d-flex h5 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    
+    .contact-details .d-flex p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+    
+    /* Map section adjustments */
+    .map-section {
+        padding: 30px 15px;
+    }
+    
+    .map-section .ratio {
+        height: 300px;
+    }
+    
+    /* Footer adjustments */
+    footer {
+        padding: 30px 15px;
+        text-align: left;
+    }
+    
+    footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+    
+    footer h5 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    footer p, 
+    footer li {
+        font-size: 0.9rem;
+    }
+    
+    footer .text-center {
+        text-align: center !important;
+        margin-top: 20px;
+    }
+    
+    .social-icons {
+        margin-bottom: 15px;
+    }
+    
     .social-icons a {
         font-size: 1.2rem;
+        margin-right: 15px;
+        margin-left: 0;
     }
 }
-.contact-details .d-flex .fas.fa-envelope + div p {
-    word-break: break-word;
-    overflow-wrap: break-word;
-    font-size: 12px;
-    max-width: 100%;
-}
 
-/* Improve responsive layout for contact details */
-@media (max-width: 768px) {
+/* Additional improvements for very small screens */
+@media (max-width: 480px) {
     .contact-details .d-flex {
         flex-direction: column;
-        align-items: flex-start;
+        margin-bottom: 20px;
     }
     
     .contact-details .d-flex i {
         margin-bottom: 10px;
     }
     
-    /* Footer email fix */
-    footer p {
-        word-break: break-word;
+    .contact-info .col-md-6 form {
+        padding: 10px;
     }
-}
-@media (max-width: 992px) and (min-width: 769px) {
-    .contact-details .d-flex .fas.fa-envelope + div p {
-        font-size: 11px;
+    
+    .btn-primary {
+        width: 100%;
+    }
+    
+    .contact-hero h1 {
+        font-size: 1.8rem !important;
     }
 }
 
-/* Fix for footer email overflow */
-footer p {
-    overflow-wrap: break-word;
-    word-break: break-word;
+/* Medium screen improvements */
+@media (max-width: 992px) and (min-width: 769px) {
+    .contact-details .d-flex {
+        align-items: flex-start;
+    }
+    
+    .contact-details .d-flex i {
+        font-size: 1.5rem;
+        margin-top: 5px;
+    }
+    
+    .contact-details .d-flex .fas.fa-envelope + div p {
+        font-size: 12px;
+    }
+    
+    .contact-hero h1 {
+        margin: 60px 0 !important;
+    }
 }

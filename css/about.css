@@ -1,3 +1,4 @@
+@import url("navbar.css");
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -6,9 +7,7 @@
     --dark-gray: #343a40;
 }
 
-nav {
-    background-color: black;
-}
+
 
 body {
     font-family: 'Inter', sans-serif;
@@ -16,72 +15,25 @@ body {
     color: var(--dark-gray);
     overflow-x: hidden;
     align-items: center;
-    background: linear-gradient(to right, #b6bbc0, #e9ecef);
-    padding-top: 190px; /* Added to account for fixed navbar height */
+    background:  #E3EFE5;
+
+    padding-top: 190px !important; /* Added to account for fixed navbar height */
 }
 
 /* Navigation */
-.navbar {
-    padding: 1rem 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    height: 190px;
-    background-color: black;
-    
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-}
 
 
-.nav-link {
-    font-weight: 500;
-    padding: 0.5rem 1rem !important;
-    margin: 0 0.25rem;
-    position: relative;
-    background-color: #269236;
-}
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: var(--secondary-color);
-    transition: width 0.3s ease;
-}
 
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 100%;
-}
+
+
+
+
+
 /* Anjanadri animation */
-.anjanadri {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 50px;
-    font-weight: bolder;
-    color: aqua;
-    margin: 20px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    position: absolute;
-    width: 400px;
-    animation: marquee 10s linear infinite;
-}
 
-@keyframes marquee {
-    from {
-        left: 100%;
-    }
-    to {
-        left: -200px;
-    }
-}
+
+
 
 /* About Section Styles */
 .about-section {
@@ -200,18 +152,9 @@ footer {
     padding: 30px 15px;
 }
 
-.maradi .Container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-}
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px 0;
-}
+
+
 
 .contaent-h-solution {
     width: 100%;
@@ -311,41 +254,16 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
-    .navbar {
-        height: auto;
-    }
-    
-    .anjanadri {
-        font-size: 40px;
-        width: 320px;
-    }
-    
-    body {
-        padding-top: 150px;
-    }
-}
+
 
 @media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-        padding-top: 120px; /* Adjusted for mobile */
-    }
+  
     
-    .anjanadri {
-        font-size: 30px;
-        width: 250px;
-        margin: 10px;
-    }
+   
     
-    .navbar {
-        height: auto;
-    }
+   
     
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-    
+   
     .section-heading {
         font-size: 2rem;
     }
@@ -457,41 +375,16 @@ footer {
 }
 @media (max-width: 767px) {
     /* Navbar sizing */
-    .navbar {
-        height: auto !important;
-        min-height: 60px;
-        padding: 0.3rem 0;
-    }
+    
     
     /* Reduce body padding */
-    body {
-        padding-top: 90px !important; /* Adjusted for smaller navbar */
-    }
+    
     
     /* Company name styling */
-    .anjanadri {
-        font-size: 22px;
-        margin: 5px;
-        padding: 3px 6px;
-        width: 220px;
-        animation: marquee 15s linear infinite; /* Slowed down animation */
-    }
     
-    /* Navigation links */
-    .nav-link {
-        padding: 0.3rem 0.6rem !important;
-        margin: 0.1rem 0;
-        font-size: 0.9rem;
-        display: block;
-        text-align: center;
-    }
     
     /* Navbar toggler (hamburger menu) */
-    .navbar-toggler {
-        padding: 0.25rem 0.5rem;
-        font-size: 0.9rem;
-        margin-right: 10px;
-    }
+     
     
     /* When menu is expanded */
     .navbar-collapse {
@@ -503,18 +396,13 @@ footer {
     
     /* Extra small devices */
     @media (max-width: 480px) {
-        .anjanadri {
-            font-size: 18px;
-            width: 180px;
-        }
+      
         
         body {
             padding-top: 80px !important;
         }
         
-        .navbar-brand {
-            margin-right: 0;
-        }
+        
     }
 }
 /* Update these specific rules in your about.css file */
@@ -522,26 +410,17 @@ footer {
 
 
 /* Ensure the media queries have higher specificity */
-@media (max-width: 991px) {
-    body {
-        padding-top: 150px !important;
-    }
-}
 
-@media (max-width: 768px) {
-    body {
-        padding-top: 120px !important;
-    }
-}
 
-@media (max-width: 767px) {
-    body {
-        padding-top: 120px !important; /* Increase this value */
-    }
-}
 
-@media (max-width: 480px) {
-    body {
-        padding-top: 110px !important;
-    }
-}
+
+
+
+
+
+  
+ 
+  
+  /* Responsive adjustments */
+  
+  
