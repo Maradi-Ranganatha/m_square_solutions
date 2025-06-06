@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjanadri Floor Tech - Home</title>
+    <title>M SQUARE WATERPROOFING SOLUTIONS - Home</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,51 +22,191 @@
     
     <style>
         body{
-        background: #d8d9da;
+        background: #d8d9da !important;
         margin-top: 266px;
         }
+        
+/* Unique styling for section header */
+.section-header-special h2 {
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-header-special h2::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2c3e50);
+    bottom: 0;
+    left: 10%;
+    border-radius: 5px;
+}
+
+.highlight-text {
+    background: linear-gradient(90deg, #2c3e50, #3498db);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 0 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight-text::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(52, 152, 219, 0.2);
+    bottom: 5px;
+    left: 0;
+    z-index: -1;
+}
+.highlight {
+    background: linear-gradient(90deg, #111214, #1a1c1d);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 0 5px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Add this to your CSS file */
+.highlight::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0; /* Changed from 10px to 0 to remove the underline */
+    background-color: transparent; /* Made transparent as a backup */
+    bottom: 5px;
+    left: 0;
+    z-index: -1;
+}
+
+/* Product card styling */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image container for centering */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Product image styling */
+.portfolio-section .img-fluid {
+    border-radius: 10px 10px 0 0;
+    border: 2px solid #2c3e50;
+    border-bottom: none;
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Product title styling */
+.product-title {
+    background: rgba(44, 62, 80, 0.9);
+    padding: 10px 5px;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.product-title h3 {
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-card:hover .product-title {
+    background: rgba(52, 152, 219, 0.9);
+}
+
+@media (max-width: 768px) {
+    .section-header-special h2 {
+        font-size: 2rem;
+    }
+    
+    .product-title h3 {
+        font-size: 0.9rem;
+    }
+    
+    .portfolio-section .img-fluid {
+        height: auto;
+    }
+}
+
     </style>
 
     
 </head>
 <body >
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-black">
-        <div class="container nav-container ">
-            <div class="logo-brand-container fixed-logo-container">
-               <a href="./photos/logo_main.jpg"> <img src="./photos/logo_main.jpg" alt="anjanadri logo" class="navbar-logo"></a>
-                <p class="navbar-brand text-light fw-bold " href="index.html">ANJANADRI FLOORTECH SOLUTIONS</p>
-            </div>
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="companies.html">Associated Companies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./photos/brochure_compressed.pdf" download>
-                            Brochure <i class="fas fa-download"></i>
-                        </a>
-                    </li>
-                </ul>
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-circle"><img src="./photos/logo'.png"></div>
+                </div>
+
+                <!-- Company Name -->
+                
+                    <span class="nova"><strong>M SQUARE  WATERPROOF SOLUTIONS</strong></span>
+                
+
+                <!-- Mobile Menu Button -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Navigation Links -->
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        
+                        <li><a href="./contact.html" >Contact</a></li>
+                        <li><a href="./photos/brochure.pdf" download="brochure.pdf" >Brochure</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </nav>
+    </header>
+
     
    
     <!-- Hero Section -->
@@ -76,8 +216,8 @@
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h1 class="display-4 fw-bold">Transform Your Space with Premium Flooring Solutions</h1>
-                    <p class="lead">A PERFECT SOLUTIONS BY FLOORING EXPERTS.</p>
+                    <h1 class="display-4 fw-bold highlight" >Protect Your Space with Premium Waterproofing Solutions</h1>
+                    <p class="lead highlight">THE PERFECT WATERPROOFING SOLUTION FROM TRUSTED EXPERTS</p>
                     <a href="#contact" class="btn btn-primary btn-lg">Get Free Quote</a>
                 </div>
             </div>
@@ -85,219 +225,205 @@
     </section>
     
     <!-- Services Section -->
-    <section class="services-section py-5">
-        <div class="marquee-container">
-            <h2 style="font-weight: bolder; color: black; " class="text-center mb-5" data-aos="fade-up">CLIENTILE</h2>
-            <div class="marquee-content"> 
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.YFy_WpD-OV0Nc9WHjPIjgAHaE8&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.422MLEkZ3anijjc_Gp4chQHaD4&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse2.mm.bing.net/th?id=OIP.wIfiq5-E0RRQVrJ1V-fZNgAAAA&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item" style="margin-right: 10px;">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.DfQmcH3g0Hz0YM5zRsy0_QAAAA&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.kc6e7Sw94RstRgfxJovl1wHaHa&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.u63XnWSjExcHeDrJaeDLewHaE7&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse3.mm.bing.net/th?id=OIP.SJB6oLOyX1K3uvJ3zBBp_QHaEK&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP._0rvcPqSaG_pVDX-8hVJkQHaE8&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse2.mm.bing.net/th?id=OIP.UjGN3aAX78egRdWq2-wztgAAAA&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://www.lalsweets.com/cdn/shop/files/lala.png?v=1690543499" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse2.mm.bing.net/th?id=OIP.tW6eyx1weWIum4GIZxrEMQHaFW&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse4.mm.bing.net/th?id=OIP.DRC4Q-bAheD9V2DMi3UP0QHaCb&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.xEJAAC0f2cmMcg37HuW7kAHaHa&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse4.mm.bing.net/th?id=OIP.0OKSmDPNgFHYO1alXCDyFQHaBr&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse3.mm.bing.net/th?id=OIP.aqOUf-xMNOJv2lNxhD6-KQAAAA&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://4.bp.blogspot.com/_UFS2Vwzlv-s/TNeSWfTCUHI/AAAAAAAAACE/oiksEOpE-pw/s1600/Sagar+Hospitals+Logo.JPG" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse4.mm.bing.net/th?id=OIP.SqsAD4Q7396N1m9nNapauQAAAA&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.YFy_WpD-OV0Nc9WHjPIjgAHaE8&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.422MLEkZ3anijjc_Gp4chQHaD4&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse2.mm.bing.net/th?id=OIP.wIfiq5-E0RRQVrJ1V-fZNgAAAA&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item" style="margin-right: 10px;">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.DfQmcH3g0Hz0YM5zRsy0_QAAAA&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.kc6e7Sw94RstRgfxJovl1wHaHa&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.u63XnWSjExcHeDrJaeDLewHaE7&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse3.mm.bing.net/th?id=OIP.SJB6oLOyX1K3uvJ3zBBp_QHaEK&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP._0rvcPqSaG_pVDX-8hVJkQHaE8&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse2.mm.bing.net/th?id=OIP.UjGN3aAX78egRdWq2-wztgAAAA&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://www.lalsweets.com/cdn/shop/files/lala.png?v=1690543499" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse2.mm.bing.net/th?id=OIP.tW6eyx1weWIum4GIZxrEMQHaFW&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse4.mm.bing.net/th?id=OIP.DRC4Q-bAheD9V2DMi3UP0QHaCb&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.xEJAAC0f2cmMcg37HuW7kAHaHa&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse4.mm.bing.net/th?id=OIP.0OKSmDPNgFHYO1alXCDyFQHaBr&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse3.mm.bing.net/th?id=OIP.aqOUf-xMNOJv2lNxhD6-KQAAAA&pid=Api&P=0&h=180" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://4.bp.blogspot.com/_UFS2Vwzlv-s/TNeSWfTCUHI/AAAAAAAAACE/oiksEOpE-pw/s1600/Sagar+Hospitals+Logo.JPG" alt="#">
-                </div>
-                <div class="marquee-item">
-                    <img src="https://tse4.mm.bing.net/th?id=OIP.SqsAD4Q7396N1m9nNapauQAAAA&pid=Api&P=0&h=180" alt="#">
-                </div>
-                
-                
-               
-            </div>
-            
-        </div>
-    </section>
-  
+    
     
     <!-- Portfolio Section -->
-    <section class="portfolio-section py-5 ">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">OUR PROJECTS</h2>
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="zoom-in" >
-                    
-                        <img src="./photos/ourproject5.jpg" class="img-fluid" alt="Modern Flooring">
-                    
-                </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-                    
-                        <img src="./photos/ourproject2.jpg" class="img-fluid" alt="Luxury Interior">
-                    
-                </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-                    <a href="./photos/project vedio.mp4" data-lightbox="portfolio">
-                        <video src="./photos/project vedio.mp4" class="img-fluid" alt="Hardwood Floor">
+    <section class="portfolio-section py-5">
+    <div class="container">
+        <div class="section-header-special" data-aos="fade-up">
+            <h2 class="text-center mb-5">
+                <span class="highlight-text">PRODUCT SUPPLY AND</span>  <span class="highlight-text">APPLICATION SUPPLY</span>
+            </h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="product-card">
+                    <a href="./photos/op1.png" class="image-container">
+                        <img src="./photos/op1.png" class="img-fluid" alt="Tile Grout">
                     </a>
+                    <div class="product-title">
+                        <h3>TILE GROUT</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="product-card">
+                    <a href="./photos/op2.png" class="image-container">
+                        <img src="./photos/op2.png" class="img-fluid" alt="Waterproofing">
+                    </a>    
+                    <div class="product-title">
+                        <h3>WATERPROOFING</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="product-card">
+                    <a href="./photos/op3.png" class="image-container">
+                        <img src="./photos/op3.png" class="img-fluid" alt="Damp Proof">
+                    </a>    
+                    <div class="product-title">
+                        <h3>DAMP PROOF</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="product-card">
+                    <a href="./photos/op4.png" class="image-container">
+                        <img src="./photos/op4.png" class="img-fluid" alt="SBR Application">
+                    </a>    
+                    <div class="product-title">
+                        <h3>SBR APPLICATION</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="product-card">
+                    <a href="./photos/op5.png" class="image-container">
+                        <img src="./photos/op5.png" class="img-fluid" alt="Brush Bond Application">
+                    </a>    
+                    <div class="product-title">
+                        <h3>BRUSH BOND APPLICATION</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="product-card">
+                    <a href="./photos/op6.png" class="image-container">
+                        <img src="./photos/op6.png" class="img-fluid" alt="Cool Coat">
+                    </a>    
+                    <div class="product-title">
+                        <h3>COOL COAT</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="product-card">
+                    <a href="./photos/op7.png" class="image-container">
+                        <img src="./photos/op7.png" class="img-fluid" alt="Elastomeric Coat">
+                    </a>    
+                    <div class="product-title">
+                        <h3>ELASTOMERIC COAT</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="product-card">
+                    <a href="./photos/op8.png" class="image-container">
+                        <img src="./photos/op8.png" class="img-fluid" alt="PU Coat">
+                    </a>    
+                    <div class="product-title">
+                        <h3>PU COAT</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="product-card">
+                    <a href="./photos/op9.png" class="image-container">
+                        <img src="./photos/op9.png" class="img-fluid" alt="Injection Grout">
+                    </a>    
+                    <div class="product-title">
+                        <h3>INJECTION GROUT</h3>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     
     <!-- Contact Section -->
-    <section id="contact" class="contact-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Contact Us</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
+    <!-- Contact Section -->
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="contact-form-card" data-aos="zoom-in">
                     <form action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="591c353f-455f-4899-ba0a-cafb5bf49407">
+                        <input type="hidden" name="access_key" value="c00afd6d-96e6-4f38-afe9-5842350a5a32">
                         <h3 class="mb-4">Send us a Message</h3>
-                    
-                        <div class="mb-3">
+                        
+                        <div class="mb-3 input-with-icon">
+                            <i class="fas fa-user"></i>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         
-                        <div class="mb-3">
+                        <div class="mb-3 input-with-icon">
+                            <i class="fas fa-envelope"></i>
                             <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                         </div>
                         
-                        <div class="mb-3">
+                        <div class="mb-3 input-with-icon">
+                            <i class="fas fa-phone"></i>
                             <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Contact Number" pattern="[0-9]{10}" required>
                         </div>
                     
-                        <div class="mb-3">
+                        <div class="mb-3 input-with-icon">
+                            <i class="fas fa-tag"></i>
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                         </div>
                     
-                        <div class="mb-3">
+                        <div class="mb-3 input-with-icon">
+                            <i class="fas fa-comment"></i>
                             <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                     
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </button>
                     </form>
-                    
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     
     <!-- Footer -->
     <footer class="bg-dark text-light py-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <!-- Logo Section -->
+                <div class="col-md-4 d-flex justify-content-center align-items-center mb-4"> <!-- Increased margin bottom -->
+                    <div class="logo-footer">
+                        <img
+                            src="/photos/logo'.png"
+                            alt="Logo"
+                            class="img-fluid"
+                            style="max-width: 100px; height: auto;"  
+                        />
+                    </div>
+                </div>
+    
+                <!-- Contact Us Section -->
+                <div class="col-md-4 mb-4"> <!-- Increased margin bottom -->
                     <h5>Contact Us</h5>
-                    <p>
-                        <i class="fas fa-phone me-2"></i> +91 9945169592<br>  &nbsp&nbsp&nbsp&nbsp&nbsp +91 6361048781<br>
-                        <i class="fas fa-envelope me-2"></i> anjanadrifloortechsolutions@gmail.com<br>
-                        <i class="fas fa-map-marker-alt me-2"></i>#51,1st Main, 4th Cross, Lakshmana Nagar, Hegganahalli Cross, Banglore-560091
+                    <p style="line-height: 1.4;"> <!-- Adjusted line height for closer spacing -->
+                        <i class="fas fa-phone me-2"></i> +91 7349523259<br />
+                        &nbsp&nbsp&nbsp&nbsp&nbsp +91 7483781751<br />
+                        <i class="fas fa-envelope me-2"></i> msquarewaterproofing@gmail.com<br />
+                        <i class="fas fa-map-marker-alt me-2"></i>#17, ANDRAHALLI, D GROUP ROAD,NEAR ANDRAHALLI VOC, BANGLORE 560091
                     </p>
                 </div>
-                <div class="col-md-4">
+    
+                <!-- Quick Links Section -->
+                <div class="col-md-4 mb-4"> <!-- Increased margin bottom -->
                     <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
+                    <ul class="list-unstyled" style="margin-top: 0; padding-top: 0;"> <!-- Reduced spacing -->
                         <li><a href="index.html" class="text-light">Home</a></li>
                         <li><a href="about.html" class="text-light">About Us</a></li>
                         <li><a href="services.html" class="text-light">Services</a></li>
-                        <li><a href="companies.html" class="text-light">Associated Companies</a></li>
                         <li><a href="contact.html" class="text-light">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h5>Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
             </div>
+    
             <div class="text-center mt-3">
-                <p class="mb-0">&copy; 2024 Anjanadri Floor Tech. All rights reserved.</p>
+                <p class="mb-0" style="font-size: 0.9rem;"> <!-- Reduced font size for copyright -->
+                    &copy; 2024 M SQUARE WATERPROOFING SOLUTIONS. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
+    
     <script src="./js/navigation.js"></script>
     
     <!-- Bootstrap JS -->
@@ -311,5 +437,6 @@
     
     <!-- Custom JS -->
     <script src="./js/main.js"></script>
+    <script src="./js/c.js"></script>
 </body>
 </html>

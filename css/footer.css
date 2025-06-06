@@ -1,0 +1,179 @@
+/* Enhanced Footer Styling with new color scheme */
+footer.bg-dark {
+    background: linear-gradient(135deg, #2c3e50, #34495e) !important;
+    padding: 3rem 0 2rem !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #e74c3c;
+  }
+  
+  /* Add a subtle wave pattern to footer */
+  footer.bg-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: repeating-linear-gradient(45deg, #e74c3c, #e74c3c 10px, transparent 10px, transparent 20px);
+    opacity: 0.6;
+  }
+  
+  /* No special styling for logo container to maintain original look */
+  .logo-footer {
+    /* Original styling kept */
+  }
+  
+  /* Column heading styling */
+  footer h5 {
+    color: #e74c3c;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Underline effect for headings */
+  footer h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #e74c3c, transparent);
+    border-radius: 3px;
+  }
+  
+  /* Contact icons styling */
+  footer .fas {
+    color: #e74c3c;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px !important;
+    transition: all 0.3s ease;
+  }
+  
+  /* Footer text styling */
+  footer p {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Quick links styling */
+  footer .list-unstyled li {
+    margin-bottom: 8px;
+    transition: transform 0.2s ease;
+    position: relative;
+    padding-left: 15px;
+  }
+  
+  footer .list-unstyled li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  footer .list-unstyled li:hover {
+    transform: translateX(5px);
+  }
+  
+  footer .list-unstyled a {
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  footer .list-unstyled a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
+  }
+  
+  footer .list-unstyled a:hover {
+    color: #e74c3c !important;
+  }
+  
+  footer .list-unstyled a:hover::after {
+    width: 100%;
+  }
+  
+  /* Copyright section */
+  footer .text-center {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    margin-top: 20px !important;
+  }
+  
+  footer .text-center p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Enhanced responsive styles for better mobile experience */
+  @media (max-width: 768px) {
+    footer.bg-dark {
+      padding: 2rem 0 1rem !important;
+    }
+    
+    .col-md-4 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    footer h5::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    footer .list-unstyled {
+      display: inline-block;
+      text-align: left;
+    }
+    
+    footer .list-unstyled li::before {
+      display: inline-block;
+    }
+    
+    /* Ensure contact info aligns properly on mobile */
+    footer p {
+      max-width: 280px;
+      margin: 0 auto 0.5rem;
+      text-align: left;
+    }
+  }
+  
+  /* Extra small devices */
+  @media (max-width: 576px) {
+    footer .fas {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      font-size: 0.85rem;
+    }
+    
+    footer p {
+      font-size: 0.85rem;
+    }
+    
+    footer h5 {
+      font-size: 1rem;
+    }
+  }

@@ -1,300 +1,348 @@
-.navbar {
-    padding: 0.5rem 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    height: auto;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    min-height: 80px;
-}
-body{
-    padding-top: 80px !important;
-}
-.navbar-brand {
-    font-size: 1.5rem;
-    color: #00BFFF !important;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.nav-link {
-    font-weight: 500;
-    padding: 0.5rem 1rem !important;
-    margin: 0 0.25rem;
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, sans-serif;
+	line-height: 1.6;
+	min-height: 100vh;
+	background-color: #f3f4f6;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+/* Header styles */
+header {
+	background:  #E6E6FA;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 6.5rem;
+	position: relative;
+}
+
+/* Logo styles */
+.logo {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	margin-left: 0; /* Flush to the edge */
+	padding-left: 1rem; /* Optional spacing from the edge */
+}
+
+.logo-circle {
+	width: 12rem;
+	height: 100%;
+	background-color: #E6E6FA;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 1.25rem;
+	overflow: hidden;
+	margin-left: 0; /* Remove left margin */
+	padding-left: 0; /* Just in case */
+}
+
+.logo-circle img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+	display: block;
+}
+
+/* Company name styles */
+.company-name {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-weight: bold;
+	font-size: 1.25rem;
+	color: white;
+}
+
+/* Enhanced company name styling */
+.nova {
+    font-weight: 700;
+    font-size: 1.2rem;
+	
+    background: linear-gradient(45deg, #4B0082, #8A2BE2, #9370DB);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    animation: gradient 3s ease infinite;
     position: relative;
-    background-color: #269236;
-    white-space: nowrap;
+    display: inline-block;
+    padding: 5px 10px;
+    text-transform: uppercase;
 }
 
-.nav-link::after {
-    content: '';
+.nova::before {
+    content: "";
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
+    left: 10%;
+    width: 80%;
     height: 2px;
-    background-color: var(--secondary-color);
-    transition: width 0.3s ease;
+    background: linear-gradient(90deg, transparent, #8A2BE2, transparent);
+    animation: slideLine 3s infinite;
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 100%;
+.nova strong {
+    color: #4B0082;
+    font-weight: 900;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
 }
 
-/* Navbar container and logo styles */
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo-brand-container {
-    display: flex;
-    align-items: center;
-    max-width: 60%;
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    margin-left: 15px;
-    text-align: left;
-}
-
-.navbar-collapse {
-    justify-content: flex-end;
-}
-
-.navbar-logo {
-    position: relative;
-    z-index: 1000;
-    margin-right: 20px;
-    height: auto;
-    width: auto;
-    margin:5px 0;
-    max-height: 70px;
-    flex-shrink: 0;
-}
-
-/* Navbar toggler custom styling */
-.navbar-toggler {
-    background-color: white;
-    padding: 6px 10px;
-    border: 1px solid #ccc;
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-}
-
-/* Animated Title Between Navbar and Hero Section */
-.animated-title {
-    position: fixed;
-    top: 190px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 40;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 15px 0;
-    overflow: hidden;
-}
-  
-.animated-text {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 28px;
-    font-weight: bold;
-    color: #00f2fe;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: slide-in-out 15s linear infinite;
-}
-  
-@keyframes slide-in-out {
+@keyframes gradient {
     0% {
-        transform: translateX(100%);
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
-        transform: translateX(-100%);
+        background-position: 0% 50%;
     }
 }
 
-/* Media Queries for Responsive Navbar */
-@media (max-width: 992px) {
-    .logo-brand-container {
-        max-width: 75%;
+@keyframes slideLine {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
     }
-    
-    .navbar-brand {
-        font-size: 1.2rem;
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
     }
 }
 
 @media (max-width: 768px) {
-    /* Navbar adjustments */
-    .navbar {
-        height: auto;
-        padding: 0.5rem 0;
-    }
-    
-    .navbar-brand {
-        font-size: 1rem;
-        white-space: normal;
-        margin-left: 10px;
-        margin-right: 0;
-        overflow: hidden;
-        max-width: 70%;
-    }
-    
-    .navbar-logo {
-        height: 60px !important;
-        width: auto;
-        margin-right: 0;
-        margin-left: 10px;
-        max-height: 60px;
-    }
-    
-    .navbar > .container {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        display: flex;
-        align-items: center;
-    }
-    
-    .navbar-toggler {
-        margin-left: auto;
-        background-color: #fff;
-    }
-    
-    .navbar-collapse {
-        background-color: black;
-        padding: 15px;
-        border-radius: 5px;
-        margin-top: 10px;
-        width: 100%;
-    }
-    
-    .nav-link {
-        text-align: center;
-        margin: 5px 0;
-    }
-    
-    /* Animated title adjustments */
-    .animated-title {
-        top: 150px;
-    }
-    
-    .animated-text {
-        font-size: 18px;
-    }
-    
-    /* Logo and branding adjustments */
-    .logo-brand-container {
-        max-width: 80%;
-    }
-    
-    .navbar-toggler {
-        margin-right: 10px;
-        padding: 4px 8px;
-    }
-    
-    .navbar-toggler-icon {
-        width: 1.2em;
-        height: 1.2em;
-    }
-    
-    .navbar-brand {
-        white-space: nowrap;
-        font-size: 0.65rem; /* Smaller font size to fit the full text */
-        overflow: visible;
-        text-overflow: clip;
-        margin-left: 5px;
-        padding: 0;
-    }
-    
-    .logo-brand-container {
-        width: 85%;
-        justify-content: flex-start;
-    }
-    
-    .navbar-logo {
-        height: 50px !important;
-        width: auto;
-        margin-right: 5px;
-    }
-    
-    /* Ensure the collapsed menu is visible when expanded */
-    .navbar-collapse.show, 
-    .navbar-collapse.collapsing {
-        display: block !important;
-        background-color: black;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        padding: 10px 15px;
-        border-radius: 0 0 5px 5px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    }
-    
-    /* Ensure nav links are properly styled and visible */
-    .navbar-collapse .nav-item {
-        margin: 8px 0;
-        width: 100%;
-    }
-    
-    .navbar-collapse .nav-link {
-        display: block;
-        text-align: center;
-        padding: 8px 15px !important;
-        margin: 0;
-        width: 100%;
-        color: white !important;
-    }
-    
-    /* Fix toggler position and visibility */
-    .navbar-toggler {
-        display: block;
-        margin-left: auto;
-        position: relative;
-        z-index: 1100;
-    }
-    
-    /* Ensure proper spacing in container */
-    .nav-container {
-        padding: 10px;
-        position: relative;
+    .nova {
+        font-size: 1.1rem;
+        padding: 3px 6px;
     }
 }
 
-@media (max-width: 480px) {
-   
-    .navbar-brand {
-        font-size: 0.58rem;
-        max-width: 100%;
-        
-    }
-    
-    .navbar-logo {
-        height: 40px !important;
-        width: 40px !important;
-    }
-
+@media (max-width: 500px) {
+    .nova {
+        font-size: 0.9rem;
+        padding: 2px 4px;
+	}}
+/* Navigation styles */
+.nav-links ul {
+	display: flex;
+	gap: 1.5rem;
+	list-style: none;
 }
-@media (min-width: 769px) and (max-width: 1200px) {
-    .navbar-logo {
-        max-height: 100px;
+
+.nav-links ul li a {
+	display: inline-block;
+	padding: 0.6rem 1.2rem;
+	background-color: #1e3a8a; /* base button background */
+	color: #ffffff;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: 500;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	white-space: nowrap;
+}
+
+.nav-links ul li a:hover {
+	background-color: #3b82f6; /* lighter blue on hover */
+	color: #ffffff;
+}
+
+/* CTA Button */
+.special-link {
+	background-color: #2563eb;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+}
+
+.special-link:hover {
+	background-color: #1d4ed8;
+}
+
+/* Mobile menu toggle */
+.nav-toggle {
+	display: none;
+}
+
+.nav-toggle-label {
+	display: none;
+	cursor: pointer;
+	padding: 1rem;
+}
+
+.nav-toggle-label span {
+	display: block;
+	width: 1.25rem;
+	height: 2px;
+	background-color: black;
+	margin: 4px 0;
+	transition: 0.3s;
+}
+
+/* Main content styles */
+main {
+	padding-top: 5rem;
+}
+
+main .container {
+	padding: 2rem 1rem;
+}
+
+h1 {
+	font-size: 2rem;
+	color: #1f2937;
+	margin-bottom: 1rem;
+}
+
+p {
+	color: #4b5563;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+	.nav-toggle-label {
+		display: block;
+		z-index: 2;
+	}
+	.nav-links ul li a {
+		color: white;
+	}
+	.nav-links {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		background: #e6e8eb;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.nav-links ul {
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.nav-links a {
+		font-size: 1.5rem;
+	}
+
+	.nav-toggle:checked ~ .nav-links {
+		transform: translateX(0);
+	}
+
+	.nav-toggle:checked ~ .nav-toggle-label span:first-child {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.nav-toggle:checked ~ .nav-toggle-label span:last-child {
+		transform: rotate(-45deg) translate(5px, -5px);
+	}
+}
+
+/* For responsive design adjustments */
+@media (max-width: 768px) {
+	.logo-circle {
+		width: 6rem;
+		height: 6rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.nova {
+		font-size: 10px;
+	}
+}
+/* Add these styles to your navbar.css file */
+
+/* Ensure the hamburger menu is visible in mobile view */
+/* Mobile Hamburger Menu Fix */
+@media (max-width: 1024px) {
+  /* Position the hamburger menu properly in the right corner */
+  .nav-toggle-label {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 10px;
+    z-index: 1001; /* Ensure it's above other elements */
+  }
+  
+  /* Adjust company name positioning */
+  .nova {
+    position: relative;
+    left: 0;
+    transform: none;
+    text-align: center;
+    width: 100%;
+    padding-right: 50px; /* Make space for hamburger menu */
+  }
+  
+  /* Create proper spacing in the nav wrapper */
+  .nav-wrapper {
+    justify-content: flex-start; /* Align items to the start */
+    position: relative;
+    padding-right: 60px; /* Space for the hamburger menu */
+  }
+  
+  /* Ensure the company name is properly centered */
+  @media (max-width: 768px) {
+    .nova {
+      font-size: 1rem;
+      padding-right: 40px; /* Adjusted for smaller screens */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .nova {
+      font-size: 0.4rem;
+      padding-right: 30px; /* Further adjusted for very small screens */
     }
     
-    .navbar-brand {
-        font-size: 1.2rem;
+    /* Ensure toggle is still visible and properly positioned */
+    .nav-toggle-label {
+      right: 10px;
     }
+  }
 }
